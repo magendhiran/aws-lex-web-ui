@@ -30,6 +30,11 @@
     "lint": "eslint --format node_modules/eslint-friendly-formatter src/lex-web-ui-loader",
     "start": "node server.js"
   },
+  "dependencies": {
+    "express": "^4.16.3",
+    "serve-static": "^1.13.2",
+    "vue-carousel": "^0.6.5"
+  },
   "devDependencies": {
     "autoprefixer": "^7.2.5",
     "babel-cli": "^6.26.0",

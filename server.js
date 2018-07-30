@@ -33,4 +33,4 @@ app.use(publicPath, serveStatic(distDir));
 const port = process.env.PORT || 5000
 app.listen(port)
 // Log a feedback that this is actually running
-console.log('Server started on port ' + port)
+console.log(`Server started on port http://localhost:${port} `);
