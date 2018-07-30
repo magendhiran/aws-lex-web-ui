@@ -372,8 +372,7 @@ export class IframeComponentLoader {
       return Promise.reject(new Error('invalid credentials'));
     }
 
-    return this.credentials.getPromise()
-      .then(() => this.credentials);
+    return this.credentials.getPromise().then(() => this.credentials);
   }
 
   /**

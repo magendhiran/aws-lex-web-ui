@@ -1,14 +1,15 @@
 // 1. start the dev server using production config
-var server;
+let server;
 process.env.NODE_ENV = 'testing';
 
 // lex-web-ui: added ability to test using running web server
-var config = require('../../config')
-var devServerPort = config.dev.port;
-var devServerPath = config.dev.assetsPublicPath;
-var http = require('http');
+const config = require('../../config');
 
-var request = http.get({
+const devServerPort = config.dev.port;
+const devServerPath = config.dev.assetsPublicPath;
+const http = require('http');
+
+const request = http.get({
   hostname: 'localhost',
   port: devServerPort,
   path: devServerPath,
@@ -29,7 +30,7 @@ request.on('error', (error) => {
 });
 
 request.on('timeout', () => {
-    startDevServer();
+  startDevServer();
 });
 
 request.setTimeout(5000);
@@ -50,7 +51,7 @@ function runNightwatch() {
   // or override the environment flag, for example: `npm run e2e -- --env chrome,firefox`
   // For more information on Nightwatch's config file, see
   // http://nightwatchjs.org/guide#settings-file
-  var opts = process.argv.slice(2);
+  let opts = process.argv.slice(2);
   if (opts.indexOf('--config') === -1) {
     opts = opts.concat(['--config', 'test/e2e/nightwatch.conf.js']);
   }
@@ -58,15 +59,15 @@ function runNightwatch() {
     opts = opts.concat(['--env', 'chrome']);
   }
 
-  var spawn = require('cross-spawn');
-  var runner = spawn('./node_modules/.bin/nightwatch', opts, { stdio: 'inherit' });
+  const spawn = require('cross-spawn');
+  const runner = spawn('./node_modules/.bin/nightwatch', opts, { stdio: 'inherit' });
 
-  runner.on('exit', function (code) {
+  runner.on('exit', (code) => {
     server && server.close();
     process.exit(code);
   });
 
-  runner.on('error', function (err) {
+  runner.on('error', (err) => {
     server && server.close();
     throw err;
   });

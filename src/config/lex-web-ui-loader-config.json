@@ -1,15 +1,15 @@
 {
   "cognito": {
-    "poolId": ""
+    "poolId": "us-east-1:e2f9e218-600d-4a5b-aaf3-70b4e6fcb539"
   },
   "lex": {
-    "botName": "OrderFlowers",
-    "initialText": "You can ask me for help ordering flowers. Just type \"Buy flowers\" or click on the mic and say it.",
+    "botName": "BookTrip",
+    "initialText": "You can ask me for help booking your hotel or rental car, Say rent car or book a hotel.",
     "initialSpeechInstruction": "Say 'Buy Flowers' to get started."
   },
   "ui": {
     "parentOrigin": "",
-    "toolbarTitle": "Order Flowers",
+    "toolbarTitle": "BookTrip",
     "toolbarLogo": "",
     "pushInitialTextOnRestart": false
   },
