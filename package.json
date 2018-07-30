@@ -27,7 +27,8 @@
     "build-dev": "webpack --hide-modules",
     "build": "npm run build-prod && npm run build-dev",
     "dev": "webpack-dev-server",
-    "lint": "eslint --format node_modules/eslint-friendly-formatter src/lex-web-ui-loader"
+    "lint": "eslint --format node_modules/eslint-friendly-formatter src/lex-web-ui-loader",
+    "start": "node server.js"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.5",
