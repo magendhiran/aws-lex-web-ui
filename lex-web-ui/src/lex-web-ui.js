@@ -53,7 +53,7 @@ const AsyncComponent = ({
   component = Promise.resolve(Component),
   loading = loadingComponent,
   error = errorComponent,
-  delay = 200,
+  delay = 2000,
   timeout = 10000,
 }) => ({
   // must be a promise

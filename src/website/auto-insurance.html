@@ -114,20 +114,20 @@
 
       // You can override the chatbot UI config by passing a parameter
       var chatbotUiconfig = {
-        region: 'eu-west-1',
+        region: 'us-east-1',
         cognito: {
           // Your Cognito Pool Id - this is required to provide AWS credentials
-          poolId: 'eu-west-1:1258c116-623e-4696-aefe-0b72b65320d9',
-          region: 'eu-west-1'
+          poolId: 'us-east-1:e2f9e218-600d-4a5b-aaf3-70b4e6fcb539',
+          region: 'us-east-1'
         },       
         lex: {
           // Lex Bot Name in your account
-          botName: 'AddressChange',
-          initialText: "You can ask me for help AddressChange",
+          botName: 'AutoInsurance',
+          initialText: "You can ask me for help Auto Insurance Quote",
           initialSpeechInstruction: "Say 'Hi' to get started."
         }, 
         ui: {
-          toolbarTitle: "AddressChange"
+          toolbarTitle: "Auto Insurance"
         }
       };
 
