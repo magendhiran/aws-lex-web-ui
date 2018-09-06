@@ -78,7 +78,17 @@
         var userRegion = "eu-west-1";
         var userRegion1 = "eu-west-1";
     </script>
-    
+    <style>
+    html {
+  font-family: 'Calibri', sans-serif;
+}
+
+.application {
+    font-family: 'Calibri', sans-serif;
+    line-height: 1.5;
+}
+
+    </style>
 
 
     <script src="./lex-web-ui-loader.js"></script>
@@ -123,11 +133,12 @@
         lex: {
           // Lex Bot Name in your account
           botName: 'AutoInsurance',
-          initialText: "Please say 'Hi' to get started.",
+          initialText: "You can start the chat saying Hi or Hello.",
           initialSpeechInstruction: "Say 'Hi' to get started."
         }, 
         ui: {
-          toolbarTitle: "Auto Insurance"
+          toolbarTitle: "Auto Insurance",
+          textInputPlaceholder: 'Type here'
         }
       };
 
