@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
+    <link rel="stylesheet" id="all-css-0" href="https://www.capgemini.com/_static/??/wp-includes/css/dashicons.min.css,/wp-content/themes/capgemini-2018-02/assets/css/style.css,/wp-content/mu-plugins/jetpack/css/jetpack.css?m=1532962571" type="text/css" media="all">
+    <title>Chatbot UI iFrame Example</title>
+    <!--  bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <header class="header">
+        <div class="header__window--top container">
+            <div class="header__window--logo">
+                <a href="https://www.capgemini.com/" class="header__logo"><img src="https://www.capgemini.com/wp-content/themes/capgemini-2018-02/assets/images/logo.svg" alt="Capgemini Worldwide"></a>
+            </div>
+        </div>
+    </header>
+
+    <header class="header">
+
+        <div class="container-full hero_default hero_default__pic overlay hero--with-inset hero--title-only" style="background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNzI2IiBoZWlnaHQ9IjY1MCI+PGRlZnM+PHBhdGggaWQ9ImEiIGQ9Ik0yNi42IDc0M3MtODkuNC0xNDUuOSAxMDQuMy0yMjEuNGMxOTMuNi03NS41IDMxMi44LTExNi42IDIzMC45LTI0N0M2MjAuNiA2NS4yIDczMi40IDk0LjQgNzMyLjQgOTQuNFY3NDNIMjYuNnoiLz48L2RlZnM+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNiAtOTMpIj48bWFzayBpZD0iYiIgZmlsbD0iI2ZmZiI+PHVzZSB4bGluazpocmVmPSIjYSIvPjwvbWFzaz48dXNlIGZpbGw9IiM5QzlDOUMiIHhsaW5rOmhyZWY9IiNhIi8+PGcgZmlsbD0iIzAwNzBBRCIgbWFzaz0idXJsKCNiKSI+PHBhdGggZD0iTTEgLjJoNzMxdjc0M0gxeiIvPjwvZz48L2c+PC9zdmc+);">
+            <div class="hero_default__inner hero_default__inner--pic" style="background-image: url(https://www.capgemini.com/wp-content/uploads/2017/07/industries-08_insurance.png?w=800&amp;h=800&amp;crop=1) ">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="hero_default__info">
+                            </div>
+                            <h1 class="hero_default__title">Insurance</h1>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-full hero__inset">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+
+                        <div class="hero-inset__intro">
+                            <p>Welcome to Capgemini Insurance, Try our Bot Agnet now to get your questions answered .</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- babel-polyfill required for IE 11 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js" integrity="sha256-WRc/eG3R84AverJv0zmqxAmdwQxstUpqkiE+avJ3WSo=" crossorigin="anonymous"></script>
+
+    <!-- jquery used as part on this example - not required by lex-web-ui -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- bootstrap used as part of thie example - not required by lex-web-ui -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!--
+      Loader script tag
+
+      Add a script tag pointing to the loader library towards the bottom
+      of the html BODY section
+
+      The library and its dependencies can be hosted on another site,
+      S3 bucket or a CDN (e.g. CloudFront)
+
+      This script creates a global variable named ChatbotUiLoader which
+      provides the loader library functionality
+    -->
+
+    <script>
+        var userRegion = "eu-west-1";
+        var userRegion1 = "eu-west-1";
+    </script>
+    <style>
+        html {
+            font-family: 'Calibri', sans-serif;
+        }
+        
+        .application {
+            font-family: 'Calibri', sans-serif;
+            line-height: 1.5;
+        }
+    </style>
+
+
+    <script src="./lex-web-ui-loader.js"></script>
+
+    <!--
+      After the loader script tag has been included, you can use its global
+      variable to load the chatbot UI in an iframe
+    -->
+    <script>
+        // var userRegion = "eu-west-1" ;
+        // The loader constructor supports various configurable options used to
+        // control how the component configuration and dependencies are retrieved.
+        var loaderOpts = {
+            // Point the baseUrl option to the the base URL used to download
+            // the chatbot UI files and dependencies.
+            // In this example, the base URL is relative to the root path
+            // You can also use full URLs:
+            //    baseUrl: 'https://iframe-host.example.org/lex-web-ui/'
+            baseUrl: '/',
+
+            // enable receiving chatbot UI config from event
+            // the event is used as an alternative to passing the chatbot
+            // UI via JSON file or via the parameter in the load() function
+            shouldLoadConfigFromJsonFile: true,
+            // configUrl: './lex-web-ui-loader-config.1.json',
+            shouldLoadConfigFromEvent: true,
+            configEventTimeoutInMs: 3000,
+        }
+
+        // ChatBotUiLoader contains the IframeLoader constructor
+        // Instantiate the loader and pass the loader options
+        var iframeLoader = new ChatBotUiLoader.IframeLoader(loaderOpts);
+
+        // You can override the chatbot UI config by passing a parameter
+        var chatbotUiconfig = {
+            region: 'us-east-1',
+            cognito: {
+                // Your Cognito Pool Id - this is required to provide AWS credentials
+                poolId: 'us-east-1:f41b4fa3-afa6-4947-9f6f-0df0c00ff958',
+                region: 'us-east-1'
+            },
+            lex: {
+                // Lex Bot Name in your account
+                botName: 'Autoquote_one',
+                initialText: "You can start the chat saying Hi or Hello.",
+                initialSpeechInstruction: "Say 'Hi' to get started."
+            },
+            ui: {
+                toolbarTitle: "Auto Insurance",
+                textInputPlaceholder: 'Type here'
+            }
+        };
+
+        // load the iframe
+        iframeLoader.load(chatbotUiconfig)
+            .then(function() {
+                // at this point the API is available
+                // so I can send a ping to the iframe
+                iframeLoader.api.ping();
+
+                // perform actions on the parent dependent on the chatbot
+                // loading. For example, enable the send button once the
+                // chatbot UI is loaded
+                $('#send-intent').prop('disabled', false);
+
+            })
+            .catch(function(error) {
+                console.error('chatbot UI failed to load', error);
+            });
+
+        // Sample function illustrating dynamic messaging with the iframe using
+        // the API. This function is called from the event handler of the "Send"
+        // button.
+        function sendUtterance(utterance) {
+            // function to determine if the iframe is minimized
+            function isBotMinimized() {
+                // look at the options of the loader to determine the iframe
+                // element ID
+                var elementId = iframeLoader.options.elementId;
+
+                // this class is present in the iframe when minimized
+                var minimizedClass = 'lex-web-ui-iframe--minimize';
+                return $('#' + elementId).hasClass(minimizedClass);
+            }
+
+            return Promise.resolve()
+                .then(function() {
+                    // use the toggleMinimizeUi API if the iframe is minimized
+                    return !isBotMinimized() || iframeLoader.api.toggleMinimizeUi();
+                })
+                .then(function() {
+                    return iframeLoader.api.postText(utterance);
+                })
+                .then(function() {
+                    console.log('message succesfully sent');
+                })
+                .catch(function(err) {
+                    console.error('error sending message ', err);
+                });
+        }
+    </script>
+
+    <!--
+      This script illustrates how to handle the various events supported by the
+      chatbot UI.
+    -->
+    <script>
+        $(document).ready(function chatbotHandler() {
+
+            // When the chatbot ui iframe is ready to receive the
+            // dynamic config it sends the 'receivelexconfig' event to the parent
+            // For example, you can send dynamic config/parameters
+            // (e.g. username, geolocation) to the chatbot ui from here
+            $(document).one('receivelexconfig', function onReceiveLexConfig() {
+                var localTimeZone;
+                try {
+                    localTimeZone = JSON.stringify(
+                        Intl.DateTimeFormat().resolvedOptions().timeZone
+                    );
+                } catch (err) {
+                    localTimeZone = JSON.stringify(
+                        new Date().getTimezoneOffset()
+                    )
+                }
+
+                // sample config passing the local timezone in a sessionAttribute
+                var config = {
+                    lex: {
+                        sessionAttributes: {
+                            localTimeZone: JSON.stringify(
+                                Intl.DateTimeFormat().resolvedOptions().timeZone
+                            )
+                        }
+                    }
+                };
+
+                // emit bot config event to send the dynamic config to the
+                // chatbot UI
+                // jquery can't trigger native events so use vanilla JS CustomEvent
+                var event = new CustomEvent('loadlexconfig', {
+                    detail: {
+                        config: config
+                    }
+                });
+                document.dispatchEvent(event);
+            });
+
+            // Once the chatbot UI is ready, it sends a 'lexWebUiReady' event
+            $(document).on('lexWebUiReady', function onUpdateLexState(evt) {
+                // We are just sending a ping request here as an example
+                // This example uses an event instead of calling
+                // iframeLoader.api.ping() to show the asynchronous
+                // event API alternative
+                var event = new CustomEvent(
+                    'lexWebUiMessage', {
+                        detail: {
+                            message: {
+                                event: 'ping'
+                            }
+                        }
+                    }
+                );
+                document.dispatchEvent(event);
+            });
+
+            // setup Send button handler
+            $('#send-intent').on('click', function(event) {
+                event.preventDefault();
+                sendUtterance('Buy Flowers');
+            });
+
+
+            // bot update event handler
+            // In this example, the parent page is updated based on the state
+            $(document).on('updatelexstate', function onUpdateLexState(evt) {
+                var slots = {};
+                var dialogState = {};
+                var intentName = '';
+                var sessionAttributes = {};
+                var responseCard = {};
+
+                if (evt && ('detail' in evt) && evt.detail && ('state' in evt.detail)) {
+                    slots = evt.detail.state.slots;
+                    dialogState = evt.detail.state.dialogState;
+                    intentName = evt.detail.state.intentName || intentName;
+                    sessionAttributes = evt.detail.state.sessionAttributes || sessionAttributes;
+                    responseCard = evt.detail.state.responseCard || responseCard;
+                }
+                if (!slots || !dialogState) {
+                    console.warn('updatelexstate event is missing slot or dialogState field');
+                    return;
+                }
+                $('#dialog-state').text(dialogState);
+                $('#intent-name').text(intentName);
+                $('#session-attributes').text(JSON.stringify(sessionAttributes, null, 2));
+                $('#response-card').text(JSON.stringify(responseCard, null, 2));
+
+                var $slotsContainerReplacement = $('<div>', {
+                    id: 'slots'
+                });
+                Object.keys(slots).forEach(function updateOrder(slotName, index) {
+                    var slotValue = JSON.stringify(slots[slotName]);
+                    var $slotDiv = $('<div>', {
+                        id: 'slot-' + index
+                    });
+                    var $slotName = $('<strong>').text(slotName + ': ');
+                    var $slotValue = $('<span>').text(slotValue);
+
+                    $slotDiv.append($slotName);
+                    $slotDiv.append($slotValue);
+                    $slotsContainerReplacement.append($slotDiv);
+                });
+
+                $('#slots').replaceWith($slotsContainerReplacement);
+            });
+        });
+    </script>
+</body>
+
+</html>
